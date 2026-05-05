@@ -100,24 +100,19 @@ class Inventory {
 public class Online_Game_Inventory_System {
     public static void main(String[] args) {
 
-        // Get singleton instance
         Inventory inventory = Inventory.getInstance();
 
-        // Create items using Factory
         Item sword = ItemFactory.createItem("sword");
         Item gun = ItemFactory.createItem("gun");
         Item potion = ItemFactory.createItem("potion");
 
-        // Add items to inventory
         inventory.addItem(sword);
         inventory.addItem(gun);
         inventory.addItem(potion);
 
-        // Clone item using Prototype
         Item clonedSword = sword.clone();
         inventory.addItem(clonedSword);
 
-        // Display inventory
         System.out.println("Inventory Items:");
         inventory.showItems();
     }
